@@ -1,0 +1,15 @@
+name: SACo
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - einops
+  - matplotlib
+  - opencv
+  - pytorch::pytorch=1.10.0=cudatoolkit11.3.1_0
+  - pytorch::torchvision=0.11.1=cudatoolkit11.3.1_0
+  - rasterio
+  - piq
+  - pytorch_metric_learning
+  - torchmetrics

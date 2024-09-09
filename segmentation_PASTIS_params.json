@@ -1,0 +1,15 @@
+{
+    "data_path" : "",
+    "log_path" : "",
+    "encoder_name" : "",
+    "path_to_save" : "",
+    "batch_size": 3,
+    "epochs": 100,
+    "train_folds": [1,2,3],
+    "val_folds": [4],
+    "use_class_weights": true,
+    "fine_tune_encoder" : false,
+    "mono_date":  false,
+    "use_dice_loss": false,
+    "split_data": false
+}
