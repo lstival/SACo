@@ -128,7 +128,6 @@ if __name__ == "__main__":
     print("Done")
 
     # #### Plot the best samples
-    # ## Acc individual of the samples
 
     # for idx, (images, targets) in enumerate(dataloader):
     #     all_inputs.append(images.detach().cpu())
@@ -197,11 +196,3 @@ if __name__ == "__main__":
     plt.yticks(range(len(labels)), labels)
     plt.colorbar(im)
     plt.show()
-
-    # ### Count the number of pixels per class and show the proportion
-    # total_pixels = cm.sum()
-    # pixels_per_class = cm.sum(axis=1)
-    # proportion_per_class = pixels_per_class / total_pixels
-
-    # weights = 1 / proportion_per_class
-    # weights = torch.tensor(weights, device=device)
