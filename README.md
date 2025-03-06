@@ -1,6 +1,6 @@
-# Semantically-Aware Contrastive Learning for Multispectral Remote Sensing Images (SACo)
+# Semantically-Aware Contrastive Learning for Multispectral Remote Sensing Images (SACo+)
 
-This GitHub repository contains the oficial implementation of the SACo with experiments and results using a ResNet-18 encoder trained with contrastive methods on remote sensing images. The main contributions include leveraging semantic information and texture to construct a robust feature space in the contrastive learning framework. The repository showcases performance metrics across classification, semantic segmentation, and change detection tasks, highlighting the effectiveness of integrating semantic cues and textural features in remote sensing applications.
+This GitHub repository contains the oficial implementation of the SACo with experiments and results using a ResNet-18 and ResNet-50 encoder trained with contrastive methods on remote sensing images. The main contributions include leveraging semantic information and texture to construct a robust feature space in the contrastive learning framework. The repository showcases performance metrics across classification, semantic segmentation, and change detection tasks, highlighting the effectiveness of integrating semantic cues and textural features in remote sensing applications.
 
 <p align="center">
   <img src="https://img.shields.io/badge/-pytorch-FA8072?logo=pytorch" alt="PyTorch Badge">
@@ -55,13 +55,13 @@ The texture and semantic band features act as a kind of "guide" for the model, w
 ## Paper Results
 We tested the encoder on three different downstream tasks—change detection, land cover classification, and semantic segmentation—and the results are in the table below. We found that using Semantic Aware with texture features in the ResNet18 encoder gave us better results than similar approaches.
 
-| Pre-training        | Classification Accuracy ↑ | Semantic Segmentation OA ↑ | Semantic Segmentation mIoU ↑ | Change Detection Precision ↑ | Change Detection Recall ↑ | Change Detection F1 ↑ |
-|---------------------|---------------------------|----------------------------|------------------------------|------------------------------|----------------------------|-----------------------|
-| MoCo V2             | 83.72                     | 45.23                      | 24.88                        | 62.21                        | 27.57                      | 38.21                 |
-| **SA+MoCo V2**      | **85.79**                 | 45.70                      | 25.01                        | 37.63                        | 48.60                      | 42.42                 |
-| SeCo                | 90.05                     | 49.23                      | 25.30                        | **64.15**                    | 38.89                      | 46.84                 |
-| CACo                | 93.08                     | 49.20                      | 26.47                        | 60.68                        | 42.94                      | 50.29                 |
-| **SACo (Ours)**     | **94.72**                 | **54.67**                  | **29.15**                    | 53.51                        | **48.78**                  | **52.78**             |
+| Pre-training        | Classification Accuracy ↑ | Semantic Segmentation OA (PASTIS) ↑ | Semantic Segmentation mIoU (PASTIS) ↑ | Semantic Segmentation OA (GID) ↑ | Semantic Segmentation mIoU (GID) ↑ | Change Detection Precision ↑ | Change Detection Recall ↑ | Change Detection F1 ↑ |
+|---------------------|---------------------------|-------------------------------------|---------------------------------------|----------------------------------|------------------------------------|------------------------------|----------------------------|-----------------------|
+| MoCo V2             | 83.72                     | 45.23                               | 24.88                                 | -                                | -                                  | 62.21                        | 27.57                      | 38.21                 |
+| **SA+MoCo V2**      | **85.79**                 | 45.70                               | 25.01                                 | -                                | -                                  | 37.63                        | 48.60                      | 42.42                 |
+| SeCo                | 90.05                     | 49.23                               | 25.30                                 | -                                | -                                  | **64.15**                    | 38.89                      | 46.84                 |
+| CACo                | 93.08                     | 49.20                               | 26.47                                 | -                                | -                                  | 60.68                        | 42.94                      | 50.29                 |
+| **SACo (Ours)**     | **94.72**                 | **54.67**                           | **29.15**                             | -                                | -                                  | 53.51                        | **48.78**                  | **52.78**             |
 
 ## Qualitative Results
 Bellow some examples of the results of the model in all tasks that we had tested.
@@ -234,11 +234,12 @@ The table below provides download links for various models used in this reposito
 
 The table below provides download links for various models and their corresponding evaluation scripts:
 
-| Model                                      | Download Link                                                                                  | Evaluation Script Link                  |
-|--------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------|
-| Change Detection Model                    | [Download best_model.pth](https://zenodo.org/records/13736623/files/best_change_model.pth?download=1) | [Evaluate Model](change_detection_eval.py) |
-| EuroSAT LBP Classification Model           | [Download best_model.pth](https://zenodo.org/records/13736623/files/best_classification_model.pth?download=1) | [Evaluate Model](eval_classification_lbp.py) |
-| Semantic Segmentation PASTIS Model| [Download best_pixel_segmentation.pth](https://zenodo.org/records/13736623/files/best_pixel_segmentation.pth?download=1) | [Evaluate Model](segmentation_PASTIS_eval.py) |
+| Model                                      | Download Link ResNet18 | Download Link ResNet50                                                | Evaluation Script Link                  |
+|--------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Change Detection Model                     | [Download best_model.pth](https://zenodo.org/records/13736623/files/best_change_model.pth?download=1) | XXX | [Evaluate Model](change_detection_eval.py) |
+| EuroSAT LBP Classification Model           | [Download best_model.pth](https://zenodo.org/records/13736623/files/best_classification_model.pth?download=1) | XXX | [Evaluate Model](eval_classification_lbp.py) |
+| Semantic Segmentation PASTIS Model         | [Download best_pixel_segmentation.pth](https://zenodo.org/records/13736623/files/best_pixel_segmentation.pth?download=1) | XXX |  [Evaluate Model](segmentation_PASTIS_eval.py) |
+
 
 ## Citation
 ```
