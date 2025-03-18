@@ -7,6 +7,9 @@ This GitHub repository contains the oficial implementation of the SACo with expe
   <img src="https://img.shields.io/badge/-python-B0E0E6?logo=python" alt="Python Badge">
 </p>
 
+## Abstract
+Satellites continuously capture vast amounts of data daily, including multispectral remote sensing images (MSRSI), which facilitate the analysis of planetary processes and changes. New machine-learning techniques are employed to develop models to identify regions with significant changes, predict land-use conditions, and segment areas of interest. However, these methods often require large volumes of labeled data for effective training, limiting the utilization of captured data in practice. According to current literature, self-supervised learning (SSL) can be effectively applied to learn how to represent MSRSI. This work introduces Semantically-Aware Contrastive Learning (SACo+), a novel method for training a model using SSL for MSRSI. Relevant known band combinations are utilized to extract semantic information from the MSRSI and texture-based representations, serving as anchors for constructing a feature space. This approach is resilient against changes and yields semantically informative results using contrastive techniques based on sample visual properties, their categories, and their changes over time. This enables training the model using classic SSL contrastive frameworks, such as MoCo and its remote sensing version, SeCo, while also leveraging intrinsic semantic information. SACo+ generates features for each semantic group (band combination), highlighting regions in the images (such as vegetation, urban areas, and water bodies), and explores texture properties encoded based on Local Binary Pattern (LBP). To demonstrate the efficacy of our approach, we trained ResNet models with MSRSI using the semantic band combinations in SSL frameworks. Subsequently, we compared these models on three distinct tasks: land cover classification task using the EuroSAT dataset, change detection using the OSCD dataset, and semantic segmentation using the PASTIS and GID datasets. Our results demonstrate that leveraging semantic and texture features enhances the quality of the feature space, leading to improved performance in all benchmark tasks.
+
 ## Archicteure
 The main idea behind semantic aware is to use the semantic combination of the bands from Sentinel-2 and the texture from the images in a temporal contrastive training. This involves processing augmented versions of the images at different time stamps to create a representative feature space.
 
@@ -243,5 +246,15 @@ The table below provides download links for various models and their correspondi
 
 ## Citation
 ```
-
+@article{STIVAL2025173,
+title = {Semantically-Aware Contrastive Learning for multispectral remote sensing images},
+journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+volume = {223},
+pages = {173-187},
+year = {2025},
+issn = {0924-2716},
+doi = {https://doi.org/10.1016/j.isprsjprs.2025.02.024},
+url = {https://www.sciencedirect.com/science/article/pii/S0924271625000826},
+author = {Leandro Stival and Ricardo {da Silva Torres} and Helio Pedrini}
+}
 ```
