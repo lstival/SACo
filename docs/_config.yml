@@ -1,0 +1,44 @@
+title: "SACo - Semantically-Aware Contrastive Learning"
+description: "A novel self-supervised learning method for multispectral remote sensing images leveraging semantic information and texture-based representations"
+baseurl: "/SACo"
+url: "https://lstival.github.io"
+
+# Author information
+author:
+  name: "Leandro Stival"
+  email: ""
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Downloads
+    url: /downloads
+  - title: Results
+    url: /results
