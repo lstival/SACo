@@ -48,12 +48,31 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+/* Animated Background */
+.remote-sensing-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .remote-sensing-background {
+    opacity: 0.08;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* Navigation */
@@ -251,7 +270,8 @@ thead {
     background-color: var(--table-header-bg);
 }
 
-th, td {
+th,
+td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
@@ -275,7 +295,8 @@ tr:hover {
 }
 
 /* Highlight best results */
-td strong, th strong {
+td strong,
+th strong {
     color: var(--accent-primary);
     font-weight: 700;
 }

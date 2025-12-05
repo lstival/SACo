@@ -6,7 +6,7 @@ description: Download pre-trained model weights and evaluation scripts for SACo
 
 <div class="container">
     <div class="hero">
-        <h1>Downloads</h1>
+        <h1>📥 Downloads</h1>
         <p>Pre-trained model weights and evaluation scripts</p>
     </div>
 

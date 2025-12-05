@@ -6,7 +6,7 @@ description: Quantitative and qualitative results of SACo across classification,
 
 <div class="container">
     <div class="hero">
-        <h1>Results</h1>
+        <h1>📊 Results</h1>
         <p>Performance evaluation across multiple downstream tasks</p>
     </div>
 

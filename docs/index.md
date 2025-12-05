@@ -6,7 +6,7 @@ description: Semantically-Aware Contrastive Learning for multispectral remote se
 
 <div class="container">
     <div class="hero">
-        <h1>SACo+</h1>
+        <h1>🛰️ SACo+</h1>
         <p>Semantically-Aware Contrastive Learning for Multispectral Remote Sensing Images</p>
     </div>
 
